@@ -1,0 +1,29 @@
+<html>
+<head>
+<title> {{ title }} </title>
+<style>
+body {
+background-color:rgba(70,159,198,0.2);
+}
+h1 { 
+color:rgba(70,159,198,0.8);
+}
+#block{
+background-color:rgba(70,198,136,0.2);
+}
+
+</style>
+{% block head %}
+Hello{% ifequal request.user.user_type doctor %} Dr.{{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>
+	{% else %} {{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>
+    {% endifequal %}
+    {% endblock %}	
+</head>
+
+<body>
+
+<div id="block">
+{% block content %}{% endblock %}
+</div>
+</body>
+

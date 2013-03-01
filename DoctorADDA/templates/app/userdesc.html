@@ -1,0 +1,7 @@
+{% extends 'app/register.html' %}
+{% block content %}
+
+NAME:{{patient.user.first_name}} {{patient.user.last_name}}<br>
+EMAIL:{{patient.user.email}}<br>
+CONTACT NO:{{patient.contact_no}}<br>
+{% endblock %}

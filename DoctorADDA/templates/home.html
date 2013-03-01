@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+        Doctor'sADDA-    {% block title %}Home{% endblock %}</title>
+        <style>
+body {
+background-color:rgba(70,159,198,0.2);
+}
+h1 { 
+color:rgba(70,159,198,0.8);
+}
+#block{
+background-color:rgba(70,198,136,0.2);
+}
+
+#s{
+margin-left:300px;
+}
+</style>
+        {% block head %}<center><h1>Welcome To Doctor'sADDA.com</h1></center><br><br><br>
+        Hello Doctor||<a href='/doctoradda/register_doc/'>Register</a>||<a href='/doctoradda/login/'>Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		 Hello Patient||<a href='/doctoradda/register_patient/'>Register</a>||<a href='/doctoradda/login/'>Login</a><br>
+        {% endblock %}
+    </head>
+    <body >
+    <center><img  src="/media/images/welcome.jpg/"></center>
+		
+		{% block content %}
+        {% endblock %}
+    </body>
+</html>
+

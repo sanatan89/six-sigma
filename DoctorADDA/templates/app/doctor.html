@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<center>	{% for item in form %}
+		    <br><br><B>Name:</B><a href="/doctoradda/view/{{item.id}}/">{{item.user.username}}</a><br>
+		    <B>Speciality:</B>{{item.speciality}}
+	{% endfor %}
+</center>
+{% endblock %}

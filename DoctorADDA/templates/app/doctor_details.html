@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<center>
+<form action="." method="POST">
+	Username:{{form.user.username}}<br>
+	First Name:{{form.user.first_name}}<br>
+	Last Name:{{form.user.last_name}}<br>
+	Email:{{form.user.email}}<br>
+	Speciality:{{form.speciality}}<br>
+	Availability:{{form.availabilty}}<br>
+	Address:{{form.address}}<br><br><br>
+	<a href="/doctoradda/bookslot/{{form.id}}/">BOOK A SLOT</a>
+</form>
+</center>
+{% endblock %}
+

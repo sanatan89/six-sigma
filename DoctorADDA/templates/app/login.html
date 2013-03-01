@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			{% block title %}Login{% endblock %}
+		</title>
+			<style>
+body {
+background-color:rgba(70,159,198,0.2);
+}
+h1 { 
+color:rgba(70,159,198,0.8);
+}
+#block{
+background-color:rgba(70,198,136,0.2);
+}
+</style>
+			{% block head %}<h1>Please Login</h1>{% endblock %}
+		
+	</head>
+	<body>
+		{% block content %}
+		<center><form method="POST" action='.'>
+		<img src="/media/images/login_large.jpg/"><br>
+    	{{state}}
+    	{{form.as_p}}
+    	<input type="submit" value="Login"/>
+		</form></center>
+		{% endblock %}
+	</body>
+</html>	
+
+

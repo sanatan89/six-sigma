@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <meta charset="utf-8" />
+    <title>Consult A Doctor&trade;</title>
+    
+    <!--[if IE 6]>
+    <meta http-equiv="imagetoolbar" content="no" />
+    <![endif]-->
+    
+    <!--[if lt IE 9]>
+    <script src="__Skins/js/html5.js"></script>
+    <![endif]-->
+    
+	<link rel="stylesheet" media="all" href="__Skins/css/style.css" />
+
+    <link rel="author" href="authors.txt" />
+    <link rel="shortcut icon" href="favicon.ico" />
+	<script type="text/javascript">
+        var __WWW = "www";
+        var __CADR = "consultadr";
+        var __CADRLong = "consultadoctor";
+        var full = window.location.host;
+        //window.location.host is subdomain.domain.com
+        var parts = full.split('.');var sub = parts[0];var domain = parts[1];var type = parts[2];
+        if ("https:" == document.location.protocol) {
+            /* secure */
+            switch (sub) {
+                case __WWW:
+                    if (domain == __CADR || domain == __CADRLong) {					
+                        window.location = "http://" + sub + ".consultadr.com";
+                    }else{
+						window.location = "http://" + domain + ".consultadr.com";
+					}
+                    break;
+                default:
+                    window.location = "http://" + sub + ".consultadr.com";
+                    break;
+            }
+        } else {
+		
+            /* unsecure */
+            //sub is 'subdomain', 'domain', type is 'com'
+            switch (sub) {
+                case "jfk":
+                    window.location = "https://hca.consultadr.com/Activation/CreateToken.ashx?gID=3061";
+                    break;
+                case "lawnwood":
+                    window.location = "https://hca.consultadr.com/Activation/CreateToken.ashx?gID=3062";
+                    break;
+                case "raulerson":
+                    window.location = "https://hca.consultadr.com/Activation/CreateToken.ashx?gID=3063";
+                    break;
+            }
+            switch (domain) {
+                case "jfk":
+                    window.location = "https://hca.consultadr.com/Activation/CreateToken.ashx?gID=3061";
+                    break;
+                case "lawnwood":
+                    window.location = "https://hca.consultadr.com/Activation/CreateToken.ashx?gID=3062";
+                    break;
+                case "raulerson":
+                    window.location = "https://hca.consultadr.com/Activation/CreateToken.ashx?gID=3063";
+                    break;
+            }
+        }
+    </script>
+	
+	
+</head>
+
+<body>
+    <div id="wrapper">
+        
+        <header id="header">
+            <div class="inner">
+
+                <h1 id="brand"><a class="seo" href="index.php">Consult A Doctor</a></h1>
+                <div id="header-content">
+                    <ul id="mini-nav">
+                        <li class="menu-item"><a href="index.php">Home</a></li>
+                        <li class="menu-item"><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact</a></li>
+                        <li class="menu-item"><a href="https://www.consultadr.com/Members/Login.aspx" target="_new" >Member Login</a></li>
+                        <li class="menu-item"><a href="http://activation.consultadr.com" target="_new" >Activate Account</a></li>
+
+                    </ul>                    
+                  
+                </div>
+            </div>
+        </header>
+
+        <div id="site-nav" class="inner">
+            <ul class="nav">
+                <li class="menu-item"><a href="about.php"><span>About Us</span></a>
+                    <ul class="flyout">
+
+                        <li class="content">
+                            <div class="inner">
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="about.php">About Us</a></li>
+                                        <li class="menu-item"><a href="about_team.php">Leadership Team</a></li>
+                                        <li class="menu-item"><a href="about_mission.php">Mission &amp; Vision</a></li>
+
+                                        <li class="menu-item"><a href="about_what-is.php">What is Telemedicine?</a></li>
+                                        <li class="menu-item"><a href="about_careers.php">Careers</a></li>
+                                        <li class="menu-item"><a href="about_news.php">News &amp; Media</a></li>
+                                        <li class="menu-item"><a href="about_foundation.php">Foundation</a></li>
+                                        <li class="menu-item"><a href="about_contact.php">Contact Us</a></li>
+
+                                    </ul>
+                                    
+                                    <div class="middle">
+                                        <h4>Consult A Doctor is the Cure</h4>
+                                        <span class="icon doctor"></span>
+                                        <div class="text">
+                                            <p>Clients improve access, lower costs and improve outcomes when employees and their families can experience physician encounters over the phone or online. Patients receive treatment recommendations, prescriptions* sent to pharmacy anywhere in the country, lab test ordering and more. <br />
+                                            (*if appropriate)</p>
+
+                                            <p><a class="learn-more" href="about.php">Learn More<b class="icon right-arrow"></b></a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="telemedicine.php"><span>Telemedicine Solutions</span></a>
+                    <ul class="flyout">
+
+                        <li class="content">
+                            <div class="inner">
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="telemedicine.php">Telemedicine Solutions</a></li>
+                                        <li class="menu-item"><a href="telemedicine_eprescriptions.php">ePrescriptions</a></li>
+                                        <li class="menu-item"><a href="telemedicine_ehealth.php">eHealth Record</a></li>
+
+                                        <li class="menu-item"><a href="telemedicine_elab.php">eLab Testing</a></li>
+                                        <li class="menu-item"><a href="telemedicine_portal.php">Member Portal</a></li>
+                                        <li class="menu-item"><a href="telemedicine_doctors.php">Our Doctors</a></li>
+                                    </ul>
+                                    
+                                    <div class="middle">
+                                        <h4>Set Your Healthcare Free</h4>
+                                        <span class="icon clock"></span>
+
+                                        <div class="text">
+                                            <p>Around the clock affordable healthcare. 24/7 on-demand access to a licensed physician anytime, anywhere. Stop wasting time and money at the doctor's office, urgent care or ER. Telemedicine consultations via phone or email will set your life free.</p>
+                                            <p><a class="learn-more" href="technology_healthcare-free.php">Learn More<b class="icon right-arrow"></b></a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="technology_telemedicine.php"><span>Technology</span></a>
+                    <ul class="flyout">
+                        <li class="content">
+                            <div class="inner">
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="technology_telemedicine.php">Telemedicine Platform</a></li>
+                                        <li class="menu-item"><a href="technology_telecare.php">TeleCare 3.0</a></li>
+
+                                        <li class="menu-item"><a href="technology_healthcare-free.php">ConsultADoctor 24/7</a></li>
+                                        <li class="menu-item"><a href="technology_practice-free.php">MyPractice 24/7</a></li>
+                                        <li class="menu-item"><a href="technology_healthplan-free.php">MyHealthPlan 24/7</a></li>
+                                        
+                                    </ul>
+                                    
+                                    <div class="middle">
+                                        <h4>24/7 Access. Anytime, Anywhere</h4>
+                                        <span class="icon cloud"></span>
+
+                                        <div class="text">
+                                            <p>It&#8217;s fast, easy and simple to get started. TeleCare 3.0 is CONSULT A DOCTOR's cloud-based telemedicine platform for employers, health plans, providers and patients is transforming the way healthcare is delivered and accessed.</p>
+                                            <p><a class="learn-more" href="technology_telecare.php">Learn More<b class="icon right-arrow"></b></a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="employers.php"><span>Employers &amp; Groups</span></a>
+                    <ul class="flyout">
+                        <li class="content">
+                            <div class="inner">
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="employers.php">Overview</a></li>
+
+                                        <li class="menu-item"><a href="employers_corporate-clients.php">Employers</a></li>
+                                        <li class="menu-item"><a href="employers_brokers-consultants.php">Brokers &amp; Consultants</a></li>
+                                        <li class="menu-item"><a href="employers_specialty-carriers.php">Specialty Carriers</a></li>
+                                        <li class="menu-item"><a href="employers_tpas.php">TPAs</a></li>
+                                        <li class="menu-item"><a href="employers_associations.php">Associations</a></li>
+
+                                    </ul>
+                                    
+                                    <div class="middle">
+                                        <h4>Reduce Healthcare Claims</h4>
+                                        <span class="icon dollar"></span>
+                                        <div class="text">
+                                            <p>Employers, carriers, brokers, TPAs, health plans and consumers use the CONSULT A DOCTOR technology to deliver superior access to quality healthcare 24/7.</p>
+                                            <p><a class="learn-more" href="technology_healthcare-free.php">Learn More<b class="icon right-arrow"></b></a></p>
+
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="consumers.php"><span>Consumers</span></a>
+                    <ul class="flyout">
+                        <li class="content">
+
+                            <div class="inner">
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="consumers.php">Value for Consumers</a></li>
+                                        <li class="menu-item"><a href="consumers_benefits.php">Membership Benefits</a></li>
+                                        <li class="menu-item"><a href="consumers_how-it-works.php">How It Works</a></li>
+                                    </ul>
+
+                                    
+                                    <div class="middle">
+                                        <h4>Set Your Healthcare Free</h4>
+                                        <span class="icon clock"></span>
+                                        <div class="text">
+                                            <p>CONSULT A DOCTOR&#8217;s powerful, user-friendly telemedicine technology combines 24/7 physician access with cutting-edge health applications. Individuals and their families gain peace of mind and improved health outcomes.</p>
+                                            <p><a class="learn-more" href="consumers.php">Learn More<b class="icon right-arrow"></b></a></p>
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="physicians.php"><span>Physicians</span></a>
+                    <ul class="flyout">
+                        <li class="content">
+                            <div class="inner">
+
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="physicians.php">MyPractice 24/7</a></li>
+                                        <li class="menu-item"><a href="physicians_add.php">Add Telemedicine to Your Practice</a></li>
+                                        <li class="menu-item"><a href="physicians_expand.php">Expand Services &amp; Increase Revenue</a></li>
+                                        <li class="menu-item"><a href="physicians_hospitals.php">MyHospital 24/7</a></li>
+
+                                        <li class="menu-item"><a href="physicians_clinics.php">MyClinic 24/7</a></li>
+                                        <li class="menu-item"><a href="physicians_doctors.php">Our Doctors</a></li>
+                                    </ul>
+                                    
+                                    <div class="middle">
+                                        <h4>Set Your Practice Free</h4>
+                                        <span class="icon briefcase"></span>
+                                        <div class="text">
+
+                                            <p>CONSULT A DOCTOR&#8221;s telemedicine platform improves access and quality while drastically reducing costs. Now is time for private practices, healthcare providers, hospitals, clinics and health plans to expand healthcare services to include telemedicine.  </p>
+                                            <p><a class="learn-more" href="physicians.php">Learn More<b class="icon right-arrow"></b></a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="healthplans.php"><span>Health Plans</span></a>
+
+                    <ul class="flyout">
+                        <li class="content">
+                            <div class="inner">
+                                <div class="three-col">
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="healthplans.php">Overview</a></li>
+                                        <li class="menu-item"><a href="healthplans_healthplan-benefits.php">Health Plan Benefits</a></li>
+                                        <li class="menu-item"><a href="healthplans_member-benefits.php">Member Benefits</a></li>
+
+                                        <li class="menu-item"><a href="healthplans_provider-benefits.php">Provider Benefits</a></li>
+                                    </ul>
+                                    
+                                    <div class="middle">
+                                        <h4>Set Your Healthplan Free</h4>
+                                        <span class="icon stethoscope"></span>
+                                        <div class="text">
+                                            <p>CONSULT A DOCTOR&#8217;s telemedicine solution helps members reduce healthcare claims, out-of-pocket expenses, overuse of emergency rooms and urgent care and time wasted waiting days or weeks for an appointment. Care is a just call or click away. Personalized and confidential consultations with a licensed physician.</p>
+
+                                            <p><a class="learn-more" href="healthplans.php">Learn More<b class="icon right-arrow"></b></a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="last">
+                                        <h4>For Details</h4>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Contact Us</a></p>
+                                        <p><a href="http://www.consultadr.com/Contact.aspx" class="colorbox-contact">Request a Demo</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- ! EOF SITE NAV -->
+
+        
+        <div id="banner" class="slideshow inner">
+            <ul class="slides">
+               <li class="slideshow current">
+                  <div class="slide current" style="background:url(__Skins/img/banner_healthcare_1.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">set your healthcare free</h4>
+                        <p>Our Physicians available 24/7/365, just a call or a mouse click away.</p>
+                        <p class="button"><a class="btn-banner" href="employers.php"><span>Learn More &raquo;</span></a></p>
+
+                     </div>
+                  </div>
+                  <div class="slide" style="background:url(__Skins/img/banner_healthcare_2.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">never wait for a doctor again</h4>
+                        <p>24/7 access to affordable, quality healthcare anytime, anywhere.</p>
+                        <p class="button"><a class="btn-banner" href="physicians.php"><span>Learn More &raquo;</span></a></p>
+
+                     </div>
+                  </div>
+                  <div class="slide" style="background:url(__Skins/img/banner_healthcare_3.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">employers love telemedicine</h4>
+                        <p>reduce healthcare costs, enhance productivity, reduce absenteeism</p>
+                        <p class="button"><a class="btn-banner" href="healthplans_healthplan-benefits.php"><span>Learn More &raquo;</span></a></p>
+
+                     </div>
+                  </div>
+               </li>
+               <li class="slideshow">
+                  <div class="slide current" style="background:url(__Skins/img/banner_healthplan_1.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">set your health plan free</h4>
+                        <p>IMPROVE HEALTHCARE ACCESSIBILITY</p>
+
+                        <p class="button"><a class="btn-banner" href="healthplans_healthplan-benefits.php"><span>Learn More &raquo;</span></a></p>
+                     </div>
+                  </div>
+                  <div class="slide" style="background:url(__Skins/img/banner_healthplan_2.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">engage members in healthcare</h4>
+                        <p>TREATMENT AND INFORMATION OVER THE PHONE, ONLINE, VIDEO</p>
+
+                        <p class="button"><a class="btn-banner" href="healthplans_healthplan-benefits.php"><span>Learn More &raquo;</span></a></p>
+                     </div>
+                  </div>
+                  <div class="slide" style="background:url(__Skins/img/banner_healthplan_3.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">deliver cost effective care</h4>
+                        <p>TELEMEDICINE EXTENDS HEALTHCARE ACCESS TO ANYONE, ANYTIME, ANYWHERE.</p>
+
+                        <p class="button"><a class="btn-banner" href="healthplans_healthplan-benefits.php"><span>Learn More &raquo;</span></a></p>
+                     </div>
+                  </div>
+               </li>
+               <li class="slideshow">
+                  <div class="slide current" style="background:url(__Skins/img/banner_practice_1.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">set your practice free</h4>
+
+                        <p>enhanced telemedicine services at no cost. Add new revenue, evolve your practice. Set up in minutes.</p>
+                        <p class="button"><a class="btn-banner colorbox-mypractice" href="http://www.mypractice247.com/form/form.html"><span>Join the Revolution &raquo;</span></a></p>
+                     </div>
+                  </div>
+                  <div class="slide" style="background:url(__Skins/img/banner_practice_2.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">freedom is in the cloud</h4>
+
+                        <p>ONE PLATFORM, ONE COMPREHENSIVE SOLUTION, SIMPLE, EFFORTLESS.</p>
+                        <p class="button"><a class="btn-banner colorbox-mypractice" href="http://www.mypractice247.com/form/form.html"><span>Join the Revolution &raquo;</span></a></p>
+                     </div>
+                  </div>
+                  <div class="slide" style="background:url(__Skins/img/banner_practice_3.jpg) no-repeat">
+                     <div class="slide-content">
+                        <h4 class="slide-title">doctors love telemedicine</h4>
+
+                        <p>PROVIDE PATIENTS REVOLUTIONARY ACCESS TO CARE. TURN PATIENTS INTO RAVING FANS.</p>
+                        <p class="button"><a class="btn-banner colorbox-mypractice" href="http://www.mypractice247.com/form/form.html"><span>Join the Revolution &raquo;</span></a></p>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+            <nav class="pager">
+                <ul class="menu">
+
+                    <li class="menu-item"><a href="#">Set Your Healthcare Free</a><b class="icon up-arrow"></b></li>
+                    <li class="menu-item"><a href="#">Set Your Health Plan Free</a><b class="icon up-arrow"></b></li>
+                    <li class="menu-item last"><a href="#">Set Your Practice Free</a><b class="icon up-arrow"></b></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ! EOF BANNER -->
+
+        
+        <div id="news" class="inner">
+            <a class="news-link" href="about_news.php"></a>            
+            <ul class="ticker slideshow">			
+				<li class="slide current">
+                    <span class="date">10/23/2012</span>
+                    <a class="title" href="press-release_10-23-2012.php">Virtual access is poised to help solve health care's most vexing challenges for providers, employers, payers, and patients.</a>
+                </li>
+                <li class="slide current">
+                    <span class="date">03/07/2012</span>
+
+                    <a class="title" href="press-release_03-07-2012.php">Consult A Doctor Brings the Power of Telemedicine to Health Plan Market with Launch of MyHealthPlan 24/7</a>
+                </li>
+				<li class="slide">
+                    <span class="date">02/21/2012</span>
+                    <a class="title" href="press-release_02-21-2012.php">Consult A Doctor Unveils MyHospital 24/7, A Revolutionary Telemedicine Platform for Hospitals and Health Systems at HIMSS12 </a>
+                </li>
+				<li class="slide">
+
+                    <span class="date">01/18/2012</span>
+                    <a class="title" href="press-release_10-06-2011.php">Consult A Doctor Prepares for 2011-12 Flu Season with Launch of FLUHOTLINE24/7, A Medical Resource for Patients Across the U.S</a>
+                </li>
+				<li class="slide">
+                    <span class="date">11/22/2011</span>
+                    <a class="title" href="press-release_11-22-2011.php">MGMA video interview, Wolf Shlagman: Telemedicine and Health Care Costs</a>
+                </li>
+
+				<li class="slide">
+                    <span class="date">10/24/2011</span>
+                    <a class="title" href="press-release_10-24-2011.php">The Telemedicine Revolution Begins Today with A Free, Cloud-Based Platform for Practices From Consult A Doctor</a>
+                </li>
+				<li class="slide">
+                    <span class="date">10/06/2011</span>
+                    <a class="title" href="press-release_10-06-2011.php">Consult A Doctor to Offer "Sneak Peak" of Next-Gen Telemedicine Platform</a>
+
+                </li>
+				<li class="slide">
+                    <span class="date">10/04/2011</span>
+                    <a class="title" href="press-release_10-04-2011.php">Telemedicine Emerges as Hot Topic at 2011 Health 2.0 Conference.</a>
+                </li>
+            </ul>
+            
+            <ul class="social">
+                <!-- <li class="icon rss"><a class="seo" href="#">Get the Consult A Doctor RSS feed</a></li> -->
+
+                <li class="icon twitter"><a class="seo" href="http://twitter.com/consultadoctor" target="_blank">Follow Consult A Doctor on Twitter</a></li>
+                <li class="icon facebook"><a class="seo" href="http://www.facebook.com/pages/Consult-A-Doctor/219888975500" target="_blank">Become a Fan of Consult A Doctor on Facebook</a></li>
+            </ul>
+            
+            <form class="news-signup">
+                <div class="fields">
+                    <label class="infield" for="email-address">Enter Email to Receive our Newsletter</label>
+                    <input type="text" name="email_address" id="email-address" />
+
+                    <button type="submit" class="icon email">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+        <div id="home-buckets" class="inner">
+            <ul class="buckets">
+                <li class="bucket">
+                    <h3 class="bucket-head">ConsultADoctor24/7</h3>
+
+                    <div class="content">
+                        <h4 class="sub-head">Set Your Healthcare Free</h4>
+                        <p><span class="icon clock"></span>Around the clock affordable healthcare. 24/7 on-demand access to a licensed physician anytime,
+                        anywhere. Stop wasting time and money at the doctor's office, urgent care or ER. Telemedicine
+                        consultations via phone or email will set your life free.</p>
+                        <a class="btn-primary" href="technology_healthcare-free.php"><span>Learn More</span></a>
+                    </div>
+                </li>
+                
+                <li class="bucket">
+
+                    <h3 class="bucket-head">MyHealthPlan24/7</h3>
+                    <div class="content">
+                        <h4 class="sub-head">Set Your Health Plan Free</h4>
+                        <p><span class="icon stethoscope"></span>Enroll your provider network into an out-of-the-box consumer driven telemedicine
+                        platform that is fully configurable to health plans. Deploy a patient-centric solution that improves access and quality
+                        while drastically reducing costs.</p>
+                        <a class="btn-primary" href="technology_healthplan-free.php"><span>Learn More</span></a>
+                    </div>
+                </li>
+
+                
+                <li class="bucket">
+                    <h3 class="bucket-head">MyPractice24/7</h3>
+                    <div class="content">
+                        <h4 class="sub-head">Set Your Practice Free</h4>
+                        <p><span class="icon briefcase"></span>Add telemedicine to your practice. Spend more time with patients and less time on
+                        administrative tasks. Tap into the growing trend of connecting with your patients outside of the traditional office or
+                        hospital methods. Earn more, live better.</p>
+                        <a class="btn-primary" href="technology_practice-free.php"><span>Learn More</span></a>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        
+        <div id="footer">
+            <ul class="menu inner">
+                <li class="menu-item"><a href="about.php">About Us</a>
+                    <ul class="sub-menu">
+                     		<li class="menu-item"><a href="about_team.php">Leadership Team</a></li>
+
+                      		<li class="menu-item"><a href="about_mission.php">Our Vision Mission</a></li>
+                      		<li class="menu-item"><a href="about_what-is.php">What is Telemedicine?</a></li>
+                      		<li class="menu-item"><a href="about_careers.php">Careers</a></li>
+                      		<li class="menu-item"><a href="about_news.php">News &amp; Media</a></li>
+                      		<li class="menu-item"><a href="about_foundation.php">Foundation</a></li>
+
+                      		<li class="menu-item"><a href="about_contact.php">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="telemedicine.php">Telemedicine Services</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item"><a href="telemedicine.php">Telemedicine Solutions</a></li>
+                            <li class="menu-item"><a href="telemedicine_eprescriptions.php">ePrescriptions</a></li>
+
+                            <li class="menu-item"><a href="telemedicine_ehealth.php">eHealth Record</a></li>
+                            <li class="menu-item"><a href="telemedicine_elab.php">eLab Testing</a></li>
+                            <li class="menu-item"><a href="telemedicine_portal.php">Member Portal</a></li>
+                            <li class="menu-item"><a href="telemedicine_doctors.php">Our Doctors</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="technology_telemedicine.php">Technology</a>
+
+                    <ul class="sub-menu">
+                        	<li class="menu-item"><a href="technology_telemedicine.php">Telemedicine Platform</a></li>
+                            <li class="menu-item"><a href="technology_telecare.php">Telecare 3.0</a></li>
+                            <li class="menu-item"><a href="technology_healthcare-free.php">ConsultADoctor 24/7</a></li>
+                            <li class="menu-item"><a href="technology_practice-free.php">MyPractice 24/7</a></li>
+                            <li class="menu-item"><a href="technology_healthplan-free.php">MyHealthPlan 24/7</a></li>
+
+                            <!-- ROADMAP ITEMS
+                            <li class="menu-item"><a href="#">MyClinic24/7</a></li>
+                            <li class="menu-item"><a href="#">MyHospital24/7</a></li>-->
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="employers.php">Employers &amp; Groups</a>
+                    <ul class="sub-menu">
+                            <li class="menu-item"><a href="employers.php">Overview</a></li>
+                            <li class="menu-item"><a href="employers_corporate-clients.php">Employers</a></li>
+
+                            <li class="menu-item"><a href="employers_brokers-consultants.php">Brokers &amp; Consultants</a></li>
+                            <li class="menu-item"><a href="employers_specialty-carriers.php">Specialty Carriers</a></li>
+                            <li class="menu-item"><a href="employers_tpas.php">TPAs</a></li>
+                            <li class="menu-item"><a href="employers_associations.php">Associations</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="consumers.php">Consumers</a>
+                    <ul class="sub-menu">
+                            <li class="menu-item"><a href="consumers.php">Value for Consumers</a></li>
+                            <li class="menu-item"><a href="consumers_benefits.php">Membership Benefits</a></li>
+                            <li class="menu-item"><a href="consumers_how-it-works.php">How It Works</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="physicians.php">Physicians</a>
+                    <ul class="sub-menu">
+                        	<li class="menu-item"><a href="physicians.php">Your Freedom Is Waiting</a></li>
+                            <li class="menu-item"><a href="physicians_add.php">Add Telemedicine to Your Practice</a></li>
+                            <li class="menu-item"><a href="physicians_expand.php">Expand Services &amp; Increase Revenue</a></li>
+                            <li class="menu-item"><a href="physicians_hospitals.php">MyHospital 24/7</a></li>
+
+                            <li class="menu-item"><a href="physicians_clinics.php">MyClinic 24/7</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="healthplans.php">Health Plans</a>
+                    <ul class="sub-menu">
+                        	<li class="menu-item"><a href="healthplans.php">Overview</a></li>
+                            <li class="menu-item"><a href="healthplans_roi.php">Superior ROI</a></li>
+
+                            <li class="menu-item"><a href="healthplans_member-benefits.php">Member Benefits</a></li>
+                            <li class="menu-item"><a href="healthplans_provider-benefits.php">Provider Benefits</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div id="sub-footer" class="inner">           	
+            	<div style="margin-top:4px;float:right; border:solid 0px #FFFFFF;"><img src="__Skins/img/logo_tc30.png"  /></div>
+                <div class="copyright" style="margin-top:16px;>&copy; 2013 <a href="index.php">Consult A Doctor, Inc.</a> All rights reserved</div>
+
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!--[if lt IE 9]>
+    <script src="__Skins/js/curvycorners.js"></script>
+    <![end if]-->
+      
+	 <script src="__Skins/js/jquery.js"></script>
+    <script src="__Skins/js/jquery.plugins.js"></script>
+    <script src="__Skins/js/jquery.init.js"></script>
+
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher:'bf75f229-ce94-4858-b35c-7ccab90aba58', onhover:false});</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+
+</html>

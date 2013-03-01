@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+	{% block head %}<center><h1>{{state}}</h1></center>{% endblock %}
+	{% block content %}
+	
+	<center>
+	<form method="POST" action='.'>
+    
+    {{form.as_p}}<br><br>
+    <input type="submit" value="Register"/>
+	</form>
+	</center>
+	{% endblock %}
+	
