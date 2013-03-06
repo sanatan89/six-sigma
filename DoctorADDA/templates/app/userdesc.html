@@ -1,7 +1,10 @@
-{% extends 'app/register.html' %}
-{% block content %}
+{% extends 'app/doctor.html' %}
 
-NAME:{{patient.user.first_name}} {{patient.user.last_name}}<br>
-EMAIL:{{patient.user.email}}<br>
-CONTACT NO:{{patient.contact_no}}<br>
+{% block content %}
+<center><h2><U>User Details</U></h2><center>
+<center>
+NAME:{{patient.user.first_name}} {{patient.user.last_name}}<br><br>
+EMAIL:{{patient.user.email}}<br><br>
+CONTACT NO:{{patient.contact_no}}<br><br>
+</center>
 {% endblock %}

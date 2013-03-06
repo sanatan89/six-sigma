@@ -93,20 +93,27 @@ def log_user(request): #For user login
         user=authenticate(username=username,password=password)
         if user is not None:
             login(request,user)
-            request_user=UserProfile.objects.get(profile=user)           
-            if request_user.user_type=="doctor":
-                return render_to_response('app/doctor_data.html',locals())
+            if user.is_staff:
+            	return HttpResponseRedirect('/doctoradda/admin/')
             else:
-                return HttpResponseRedirect('/doctoradda/doctor/')
+            	request_user=UserProfile.objects.get(profile=user)           
+            	if request_user.user_type=="doctor":
+                	return render_to_response('app/doctor_data.html',locals())
+            
+                else:
+            		return HttpResponseRedirect('/doctoradda/doctor/')
         else:
             state="Username AND/OR Password is incorrect"
             login_form=form
             return render_to_response('app/login.html',locals())
     else:
         form=LoginForm()
+        state="Already Registered Please"
         return render_to_response('app/login.html',locals())
 
 
+def admin_details(request):
+	return render_to_response('home1.html',locals())
 
 def logout_user(request): #For user Logout
     logout(request)
@@ -134,12 +141,13 @@ def slot_book(request, d_id): #For booking a slot
         return render_to_response('app/slotbook.html',locals())
 
 
-def doctor_details(request): #For user Details
+def doctor_details(request): #For All Doctor Details
     form=Doctor.objects.all()
     return render_to_response('app/doctor.html',locals())
 
-def show_details(request,u_id):
+def show_details(request,u_id): # For 
     form=Doctor.objects.get(id=u_id)
+    print form.availability
     return render_to_response('app/doctor_details.html',locals())
     
 def thanks(request):
@@ -173,7 +181,7 @@ def vote_user(request):
 						)
 				register_vote.vote=register_vote.vote 
 				register_vote.save()
-			vote_sum=Vote.objects.all().aggregate(sum('vote'))
+			
 			rating=Vote.objects.all().aggregate(Avg('vote'))
 			return render_to_response('app/thanks.html',locals())
 		else:
@@ -182,3 +190,21 @@ def vote_user(request):
 	else:
 		form=Voting()
 		return render_to_response('app/vote.html',locals())
+		
+		
+def all_doctor(request):
+	form=Doctor.objects.all()
+	return render_to_response('home1.html',locals())
+	
+def all_patient(request):
+	form=Patient.objects.all()
+	return render_to_response('home1.html',locals())
+	
+	
+def single_detail(request,s_id):
+	form=User.objects.get(id = s_id)
+	return render_to_response('app/single.html',locals())
+	
+def delete_user(request,g_id):
+	User.objects.get(id=g_id).delete()
+	return render_to_response('home1.html',locals())

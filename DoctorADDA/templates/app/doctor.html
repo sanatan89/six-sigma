@@ -2,9 +2,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<center>	{% for item in form %}
-		    <br><br><B>Name:</B><a href="/doctoradda/view/{{item.id}}/">{{item.user.username}}</a><br>
-		    <B>Speciality:</B>{{item.speciality}}
+<center>
+<div id="s">
+	
+<ol type="1">
+{% for item in form %}
+
+	<li> 
+			Name:</B><a href="/doctoradda/view/{{item.id}}/"><font size="5">{{item.user.username}}</font></a><br><br>
+		    <B>Speciality:</B>{{item.speciality}}<br>
+		    <B>Address:</B>{{item.address}}<br>
+		    </li>
 	{% endfor %}
+</ol>
 </center>
+</div>
 {% endblock %}

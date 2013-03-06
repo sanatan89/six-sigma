@@ -2,11 +2,11 @@
 {% block content %}
 
 <center>
-	<center><img src="/media/images/welcome.jpg" width="400" height="220"><br><br><br><br>
-	Username:{{request.user.username}}<br><br>
+	<center>
+	<h3>Username:{{request.user.username}}<br><br>
 	First Name:{{request.user.first_name}}<br><br>
 	Last Name:{{request.user.last_name}}<br><br>
-	Email Id:{{request.user.email}}<br><br><br>
-	<a href='/user/'>User Details</a></center>
+	Email Id:{{request.user.email}}<br><br><br></h3>
+	<a href='/doctoradda/user/'><B>User Details</B></a></center>
 </center>
 {% endblock %}

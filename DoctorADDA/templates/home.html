@@ -1,31 +1,46 @@
 <html>
     <head>
         <title>
-        Doctor'sADDA-    {% block title %}Home{% endblock %}</title>
+        Doctor'sADDA-{% block title %}Home{% endblock %}</title>
         <style>
 body {
 background-color:rgba(70,159,198,0.2);
 }
 h1 { 
-color:rgba(70,159,198,0.8);
+color:rgba(0,0,0,0.8);
+background-color:rgba(70,159,198,0.6);
 }
 #block{
 background-color:rgba(70,198,136,0.2);
 }
+h3{
 
-#s{
-margin-left:300px;
+}
+.s{
+background-color:rgba(170,120,136,0.2);
+margin-left:275px;
+margin-right:275px;
+}
+.d{
+
+margin-left:275px;
+margin-right:275px;
+margin-top:50px;
 }
 </style>
         {% block head %}<center><h1>Welcome To Doctor'sADDA.com</h1></center><br><br><br>
-        Hello Doctor||<a href='/doctoradda/register_doc/'>Register</a>||<a href='/doctoradda/login/'>Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-		 Hello Patient||<a href='/doctoradda/register_patient/'>Register</a>||<a href='/doctoradda/login/'>Login</a><br>
+ 		<div class ="s"><h3>Hello Doctor||<a href='/doctoradda/register_doc/'>Register</a>||<a href='/doctoradda/login/'>Login</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			 Hello Patient||<a href='/doctoradda/register_patient/'>Register</a>||<a href='/doctoradda/login/'>Login</a></h3></div><br>
+        
         {% endblock %}
     </head>
     <body >
-    <center><img  src="/media/images/welcome.jpg/"></center>
+    
 		
 		{% block content %}
+		<center><img  src="/media/images/doctors.jpg/"></center>
+		<div class="d"><font size="6">It is the duty of a doctor to prolong life and it is not his duty to prolong the act of dying.</font></div>
+
         {% endblock %}
     </body>
 </html>

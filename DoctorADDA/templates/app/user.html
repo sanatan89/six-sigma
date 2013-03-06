@@ -2,12 +2,16 @@
 {% block content %}
 
 <center> 
+<div id="s">
+<ol type="1">
 {% for item in form %}
-   
-    Patient Name:<a href="/doctoradda/description/{{item.user.id}}/">{{item.user.username}}</a><br>
+   <li>
+    Patient Name:<a href="/doctoradda/description/{{item.user.id}}/"><B>{{item.user.username}}</B></a><br>
     consult day:{{item.day}}<br>
     consult hour:{{item.hour}}<br>
+    </li>
     {% endfor %}
 </center>
+</div>
 {% endblock %}
 

@@ -1,8 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'home.html' %}
 	{% block head %}<center><h1>{{state}}</h1></center>{% endblock %}
 	{% block content %}
 	
 	<center>
+	<img  src="/media/images/doctors-and-nurse.jpg/" height="100" width="200">
 	<form method="POST" action='.'>
     
     {{form.as_p}}<br><br>

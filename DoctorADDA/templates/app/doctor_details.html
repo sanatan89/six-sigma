@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <center>
+<h3>Doctor Details</h3>
+
 <form action="." method="POST">
-	Username:{{form.user.username}}<br>
-	First Name:{{form.user.first_name}}<br>
-	Last Name:{{form.user.last_name}}<br>
-	Email:{{form.user.email}}<br>
-	Speciality:{{form.speciality}}<br>
-	Availability:{{form.availabilty}}<br>
-	Address:{{form.address}}<br><br><br>
+	<label>Username:{{form.user.username}}</label><br><br>
+	<label>Full Name:{{form.user.first_name}} {{form.user.last_name}}</label><br><br>
+	<label>Email:{{form.user.email}}</label><br><br>
+	<label>Speciality:{{form.speciality}}</label><br><br>
+	<label>Availability:{{form.availability}}</label><br><br>
+	<label>Address:{{form.address}}</label><br><br><br>
 	<a href="/doctoradda/bookslot/{{form.id}}/">BOOK A SLOT</a>
 </form>
 </center>
