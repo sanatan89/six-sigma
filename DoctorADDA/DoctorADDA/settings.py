@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'medical.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/home/sanatan/training/DoctorADDA/medical.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -46,7 +46,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/home/sanatan/training/DoctorADDA/static'
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), '..','static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -151,3 +151,9 @@ LOGGING = {
         },
     }
 }
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sanatan.nayak90@gmail.com'
+EMAIL_HOST_PASSWORD = 'sashtri8984'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

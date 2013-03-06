@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 class UserProfile(models.Model):
-    user=models.ForeignKey(User, unique='true')
+    profile=models.ForeignKey(User, unique='true')
     user_type=models.CharField(max_length="10")
 
 
@@ -40,6 +40,9 @@ class Slot(models.Model):
     day=models.CharField(choices=Day,max_length="20")
     hour=models.CharField(choices=Hour,max_length="20")
 
+class Vote(models.Model):
+	user=models.ForeignKey(User)
+	vote=models.IntegerField(default= 0, null='true')
 
 
 

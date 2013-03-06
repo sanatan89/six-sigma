@@ -10,7 +10,7 @@ urlpatterns=patterns('',
         (r'logout/',views.logout_user),
         (r'view/(?P<u_id>\d+)/',views.show_details),
         (r'bookslot/(?P<d_id>\d+)/',views.slot_book),
-        (r'thanks/',views.thanks),
+        (r'thanks/',views.vote_user),
         (r'^user/',views.user_details),
         (r'^description/(?P<c_id>\d+)/',views.user_description),
         )

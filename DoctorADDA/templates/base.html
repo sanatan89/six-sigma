@@ -14,10 +14,11 @@ background-color:rgba(70,198,136,0.2);
 
 </style>
 {% block head %}
-Hello{% ifequal request.user.user_type doctor %} Dr.{{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>
-	{% else %} {{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>
-    {% endifequal %}
-    {% endblock %}	
+
+Hello {% if request.user.is_authenticated %} {{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>
+	  {% else %} Guest
+      {% endif %}
+{% endblock %}	
 </head>
 
 <body>

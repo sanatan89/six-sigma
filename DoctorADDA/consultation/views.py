@@ -1,11 +1,12 @@
 # Create your views here.
 from django.shortcuts import render_to_response,render
 from django.http import HttpResponse,HttpResponseRedirect
-from consultation.forms import DoctorRegister,PatientRegister,SlotBook,LoginForm
+from consultation.forms import DoctorRegister,PatientRegister,SlotBook,LoginForm,Voting
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
-from consultation.models import Doctor,Patient,Slot,UserProfile
-
+from consultation.models import Doctor,Patient,Slot,UserProfile,Vote
+from django.db.models import Avg
+from django.core.mail import send_mail
 
 def index(request): #For home page
     return render_to_response('home.html',locals())
@@ -33,10 +34,11 @@ def register_doctor(request): # for doctor Registration
                     )
             doctor.save()
             current_user=UserProfile.objects.create(
-                    user=user,
+                    profile=user,
                     user_type="doctor",
                     )
             current_user.save()
+            send_mail('Registration-Acknowledgement','Thanks Doctor for Registration','sanatan.nayak90@gmail.com',[user.email])
             return HttpResponseRedirect('/doctoradda/login/')
         else:
             state="Please fill the form correctly"
@@ -67,10 +69,11 @@ def register_patient(request): # For patient registration
                     )
             patient.save()
             current_user=UserProfile.objects.create(
-                    user=user,
+                    profile=user,
                     user_type="patient",
                     )
             current_user.save()
+            send_mail('Registration-Acknowledgement','Thanks for Registration','sanatan.nayak90@gmail.com',[patient.user.email])
             return HttpResponseRedirect('/doctoradda/login/')
         else:
             reg_form=form
@@ -90,8 +93,7 @@ def log_user(request): #For user login
         user=authenticate(username=username,password=password)
         if user is not None:
             login(request,user)
-            request_user=UserProfile.objects.get(user=user)
-            #print request_user.user_type            
+            request_user=UserProfile.objects.get(profile=user)           
             if request_user.user_type=="doctor":
                 return render_to_response('app/doctor_data.html',locals())
             else:
@@ -153,3 +155,30 @@ def user_details(request):
 def user_description(request,c_id):
     patient=Patient.objects.get(user=User.objects.get(id=c_id))
     return render_to_response('app/userdesc.html',locals())
+    
+def vote_user(request):
+	if request.method=="POST":
+		form=Voting(request.POST)
+		if form.is_valid():
+			form.vote=form.cleaned_data['vote']
+			if form.vote=="voteup":
+				register_vote=Vote.objects.create(
+						user=request.user,
+						)
+				register_vote.vote=register_vote.vote + 1
+				register_vote.save()
+			else:
+				register_vote=Vote.objects.create(
+						user=request.user,
+						)
+				register_vote.vote=register_vote.vote 
+				register_vote.save()
+			vote_sum=Vote.objects.all().aggregate(sum('vote'))
+			rating=Vote.objects.all().aggregate(Avg('vote'))
+			return render_to_response('app/thanks.html',locals())
+		else:
+			rform=form
+			return render_to_response('app/vote.html',locals())
+	else:
+		form=Voting()
+		return render_to_response('app/vote.html',locals())

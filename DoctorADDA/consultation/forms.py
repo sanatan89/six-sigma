@@ -44,5 +44,15 @@ class SlotBook(ModelForm):
 class LoginForm(forms.Form):
     username=forms.CharField(max_length="20")
     password=forms.CharField(widget=forms.PasswordInput)
+    
+    
+class Voting(forms.Form):
+	Voting_Types=(
+				("voteup","voteup"),
+				("votedown","votedown"),
+				)
+	vote=forms.ChoiceField(widget=forms.RadioSelect, choices=Voting_Types) 
+
+
 
 
