@@ -17,6 +17,9 @@ urlpatterns=patterns('',
         (r'allpatient/',views.all_patient),
         (r'^small/(?P<s_id>\d+)/',views.single_detail),
         (r'^delete/(?P<g_id>\d+)/',views.delete_user),
+        (r'^forgotpassword/',views.login_failure),
+        (r'^reset/',views.reset_password),
+        (r'^change/',views.change_password),
         (r'^description/(?P<c_id>\d+)/',views.user_description),
         )
 

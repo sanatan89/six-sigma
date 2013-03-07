@@ -20,7 +20,8 @@ background-color:rgba(70,198,136,0.2);
 </style>
 {% block head %}
 
-Hello {% if request.user.is_authenticated %} {{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>
+Hello {% if request.user.is_authenticated %} {{request.user.first_name}}||<a href="/doctoradda/logout/">Logout</a>||
+																		<a href="{% url consultation.views.change_password %}">Reset Password</a>
 	  {% else %} Guest
       {% endif %}
 {% endblock %}	

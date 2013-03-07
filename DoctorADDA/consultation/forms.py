@@ -10,6 +10,7 @@ class DoctorRegister(forms.Form):
     last_name=forms.CharField(max_length="20")
     email=forms.EmailField()
     password=forms.CharField(widget=forms.PasswordInput)
+    repassword=forms.CharField(widget=forms.PasswordInput)
     Day_Types=(
         ("Mon-Thu","MON-THU"),
         ("Mon-Fri","MON-FRI"),
@@ -23,7 +24,13 @@ class DoctorRegister(forms.Form):
     availability=forms.ChoiceField(widget=RadioSelect, choices=Day_Types)
     consultation=forms.ChoiceField(widget=RadioSelect, choices=Hour_Types)
     speciality=forms.CharField(max_length="30")
-    address=forms.CharField(max_length="100")		
+    address=forms.CharField(max_length="100")
+    def clean(self):
+    	form_data = self.cleaned_data
+    	if form_data['password'] != form_data['repassword']:
+        	self._errors["password"] = "Password do not match"
+        	del form_data['password']
+    	return form_data		
 
 
 class PatientRegister(forms.Form):
@@ -32,8 +39,14 @@ class PatientRegister(forms.Form):
     last_name=forms.CharField(max_length="20")
     email=forms.EmailField()
     password=forms.CharField(widget=forms.PasswordInput)
+    repassword=forms.CharField(widget=forms.PasswordInput)
     contact=forms.IntegerField()
-	    
+    def clean(self):
+    	form_data = self.cleaned_data
+    	if form_data['password'] != form_data['repassword']:
+        	self._errors['password'] = "Password do not match"
+        	del form_data['password']
+    	return form_data		
 
 class SlotBook(ModelForm):
     class Meta:
@@ -52,6 +65,26 @@ class Voting(forms.Form):
 				("votedown","votedown"),
 				)
 	vote=forms.ChoiceField(widget=forms.RadioSelect, choices=Voting_Types) 
+	
+	
+class Failure(forms.Form):
+	username=forms.CharField(max_length="20")
+	
+class ResetForm(forms.Form):
+	username=forms.CharField(max_length="20")
+	password=forms.CharField(widget=forms.PasswordInput)
+	repassword=forms.CharField(widget=forms.PasswordInput)
+	def clean(self):
+		form_data = self.cleaned_data
+		if form_data['password']!=form_data['repassword']:
+			self._errors['password']="Password do not match"
+			del form_data['password']
+		return form_data	
+	
+class ChangePassword(forms.Form):
+	password=forms.CharField(widget=forms.PasswordInput)
+
+
 
 
 

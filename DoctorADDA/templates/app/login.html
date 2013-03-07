@@ -7,6 +7,7 @@
     <form method="POST" action='.'>	
     	{{form.as_p}}
     	<input type="submit" value="Login"/>
+    	<a href="{% url consultation.views.login_failure %}">{{extra}}</a>
 	</form></center>
 {% endblock %}
 		
