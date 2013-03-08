@@ -1,0 +1,12 @@
+{% extends 'home1.html' %}
+{% block content %}
+<center>
+<form method="POST" action=".">
+Username:{{form.username}}<br><br>
+Full Name: {{form.first_name}} {{form.last_name}}<br><br>
+Email Id:{{form.email}}<br><br>
+<a href="/doctoradda/delete/{{form.id}}/">Delete User</a>
+</form>
+</center>
+{% endblock %}
+

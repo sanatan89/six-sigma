@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>{% block title %}admin{% endblock %}<br><br>
+		<center><h3>Welcome Admin</h3></center>
+		<a href="/doctoradda/alldoctor/">Doctors</a>||<a href="/doctoradda/allpatient/">Patients</a>||
+		<a href="{% url consultation.views.logout_user %}">Logout</a><br><br><br>
+	</head>
+	<body>
+		{% block content %}
+		<form method="POST" action=".">
+		{% for item in form %}
+			<a href="/doctoradda/small/{{item.user.id}}/">{{item.user.username}}</a><br>
+		{% endfor %}
+		</form>
+		{% endblock %}
+	</body>
+</html>

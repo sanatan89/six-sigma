@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+<form method="POST" action=".">
+<table>
+{{form.as_table}}
+</table>
+<input type="submit" value="Submit"/>
+
+</form>
+</center>
+{% endblock %}
